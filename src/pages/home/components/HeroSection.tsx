@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { SliverText } from "@/components/ui/silver-text";
 import { wait } from "@/utils/time";
 import Spotlight from "@/components/svg/Spotlight";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+    const navigateFunction = useNavigate();
     const animation1 = useAnimation();
     const animation2 = useAnimation();
     const animation3 = useAnimation();
@@ -75,7 +77,6 @@ export default function HeroSection() {
                             animate={animation2}
                             initial={{ y: 100 }}>
                             internship{" "}
-                            
                         </motion.div>
 
                         <motion.div
@@ -109,14 +110,23 @@ export default function HeroSection() {
             </section>
             <div className="md:px-[80px] px-5 justify-center xl:justify-start mt-8 flex gap-3">
                 <Button
+                    onClick={() => {
+                        window.scrollTo({
+                            behavior: "smooth",
+                            top: 500,
+                        });
+                    }}
                     className="font-sans font-semibold  rounded-md  h-[45px] px-10 hover:cursor-pointer  transition-all text-[16px]"
                     variant={"outline"}>
                     About us
                 </Button>
                 <button
+                    onClick={() => {
+                        navigateFunction("/register");
+                    }}
                     name="ActionBtn"
                     className=" text-neutral-200  bg-emerald-500   active:scale-100 transition-all  bg-gradient-to-tr from-emerald-600 to-emerald-700    py-2  text-[16px]  px-10 font-sans font-semibold rounded-md hover:from-neutral-300 hover:to-neutral-400 hover:text-black    shadow-[0px_0px_20px_#05966988]  ">
-                   Registration
+                    Registration
                 </button>
             </div>
         </section>

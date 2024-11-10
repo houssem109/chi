@@ -1,7 +1,9 @@
 export default function AboutSection() {
     return (
         <section className="min-h-[350px] max-w-[1700px] mx-auto relative xl:px-[80px] mt-0 sm:px-[40px] px-4">
-            <p className="text-[32px] font-mono text-neutral-300  w-full    pt-5 font-semibold">
+            <p
+                id="about-section"
+                className="text-[32px] font-mono text-neutral-300  w-full    pt-5 font-semibold">
                 <span className="font-mono text-emerald-500 ">01|</span>
                 <span className="px-2 ">ABOUT US </span>
             </p>
@@ -21,10 +23,10 @@ export default function AboutSection() {
                         <span className="text-emerald-400 font-semibold uppercase ">
                             amazing video games (PC, PS4, XBOX-ONE)
                         </span>{" "}
-                        and teach people how to create them. 
+                        and teach people how to create them.
                     </p>
-                    
-                 {/*    <p className="mt-5 md:block hidden">
+
+                    {/*    <p className="mt-5 md:block hidden">
                         We use top tools like{" "}
                         <span className="text-emerald-400 font-semibold uppercase">
                             Blender
@@ -69,7 +71,7 @@ export default function AboutSection() {
                             alt=""
                         />
                     </div>*/}
-                </div> 
+                </div>
             </div>
         </section>
     );
