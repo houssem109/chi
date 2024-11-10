@@ -1,19 +1,29 @@
 import { AlignJustify } from "lucide-react";
 import { SliverText } from "../ui/silver-text";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function Nav() {
+    const navigateFunction = useNavigate();
     return (
         <nav className="flex max-w-[1600px] mx-auto pt-5 xl:px-[80px] md:px-[50px] px-5">
             <SliverText className="text-[36px]">CGI_Studio</SliverText>
             <div className="md:flex hidden w-full ml-auto   items-center justify-end">
-                <p className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] ">
+                <p onClick={() => {
+                        navigateFunction("/");
+                    }} className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] ">
                     Home
                 </p>
-                <p className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 ">
+                <p onClick={() => {
+                        navigateFunction("/");
+                    }}
+                 className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 ">
                     Roadmap
                 </p>
-                <p className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 mr-8 ">
+                
+                <p onClick={() => {
+                        navigateFunction("/");
+                    }}
+                     className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 mr-8 ">
                     Projetcs
                 </p>
                 <Link to="/register">
@@ -29,7 +39,9 @@ export default function Nav() {
                     <AlignJustify className="md:hidden ml-auto my-auto opacity-70 h-[36px] w-[36px] text-[36px] " />
                 </SheetTrigger>
                 <SheetContent side={"top"}>
-                    <div className="hover-underline-animation  !flex opacity-80 py-1 active:scale-95 transition-transform  border  items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
+                    <div onClick={() => {
+                        navigateFunction("/");
+                    }} className="hover-underline-animation  !flex opacity-80 py-1 active:scale-95 transition-transform  border  items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Home
                     </div>
                     <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
@@ -38,7 +50,9 @@ export default function Nav() {
                     <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Projetcs
                     </div>
-                    <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
+                    <div onClick={() => {
+                        navigateFunction("/register");
+                    }} className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Registration
                     </div>
                 </SheetContent>
