@@ -1,6 +1,6 @@
 export default function AboutSection() {
     return (
-        <section className="min-h-[350px] max-w-[1700px] mx-auto relative xl:px-[80px] mt-0 sm:px-[40px] px-4">
+        <section className="min-h-[350px] max-w-[1700px] mx-auto relative xl:px-[80px] pt-166 sm:px-[40px] px-4">
             <p
                 id="about-section"
                 className="text-[32px] font-mono text-neutral-300  w-full    pt-5 font-semibold">
@@ -62,7 +62,9 @@ export default function AboutSection() {
                         . We believe in making games that entertain, inspire,
                         and educate.{" "}
                     </p>
+                */}
                 </div>
+                
                 <div className="xl:w-[40%] md:w-[30%] md:static absolute left-0  top-0  xl:h-[400px] h-[250px] right-0 flex items-center justify-center  ">
                     <div className="xl:w-[350px]  w-full  xl:translate-x-0 translate-x-10 relative xl:h-[350px] h-[250px]  border xl:mt-5 mt-56 md:block hidden  shadow-[0px_0px_400px_#05966988]">
                         <img
@@ -70,7 +72,7 @@ export default function AboutSection() {
                             className="object-center md:opacity-80 object-cover  md:block hidden"
                             alt=""
                         />
-                    </div>*/}
+                    </div>
                 </div>
             </div>
         </section>

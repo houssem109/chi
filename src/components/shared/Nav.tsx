@@ -14,10 +14,10 @@ export default function Nav() {
                     Home
                 </p>
                 <p onClick={() => {
-                        navigateFunction("/");
+                        navigateFunction("/Programs");
                     }}
                  className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 ">
-                    Roadmap
+                    programs
                 </p>
                 
                 <p onClick={() => {
@@ -44,8 +44,10 @@ export default function Nav() {
                     }} className="hover-underline-animation  !flex opacity-80 py-1 active:scale-95 transition-transform  border  items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Home
                     </div>
-                    <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
-                        Roadmap
+                    <div 
+                    onClick={()=> navigateFunction("/ProgramsPage")}
+                     className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
+                        programs
                     </div>
                     <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Projetcs
