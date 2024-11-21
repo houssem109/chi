@@ -21,16 +21,22 @@ export default function Nav() {
                 </p>
                 
                 <p onClick={() => {
-                        navigateFunction("/");
+                        navigateFunction("/projetpage");
                     }}
                      className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md:ml-6 mr-8 ">
                     Projetcs
                 </p>
-                <Link to="/register">
+                <p onClick={() => {
+                        navigateFunction("/register");
+                    }}
+                     className="hover-underline-animation hover:cursor-pointer font-medium font-mono text-[20px] md: mr-8 ">
+                    Registration
+                </p>
+                <Link to="/login">
                 <button
                     name="navActionBtn"
                     className=" text-neutral-200  bg-emerald-500   active:scale-100 transition-all  bg-gradient-to-tr from-emerald-600 to-emerald-700 hover:from-neutral-300 hover:to-neutral-400 hover:text-black    py-2 font-bold text-[18px]  px-6 font-mono  rounded-md    shadow-[0px_0px_20px_#05966988]  ">
-                    Registration
+                    login
                 </button>
                 </Link>
             </div>
@@ -49,13 +55,19 @@ export default function Nav() {
                      className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         programs
                     </div>
-                    <div className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
+                    <div  onClick={() => { navigateFunction("/projetpage");}}
+                    className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Projetcs
                     </div>
                     <div onClick={() => {
                         navigateFunction("/register");
                     }} className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
                         Registration
+                    </div>
+                    <div onClick={() => {
+                        navigateFunction("/login");
+                    }} className="hover-underline-animation !flex opacity-80 py-1 active:scale-95 transition-transform  border items-center justify-center mt-4 hover:cursor-pointer w-full font-medium font-mono text-[28px] ">
+                        login
                     </div>
                 </SheetContent>
             </Sheet>
