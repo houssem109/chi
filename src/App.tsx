@@ -7,6 +7,7 @@ import Programs from "./pages/home/components/programs";
 import ProjectsPage from "./components/projetpage/ProjectsPage";
 import QuestionPage from "./components/question/QuestionPage";
 import RegisterSPage from "./components/register/registerSPage";
+import AddProjectPage from "./components/projetpage/AddProjectPage";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/projetpage" element={<ProjectsPage/>} />
                 <Route path="/QuestionPage" element={<QuestionPage/>} />
                 <Route path="/registerSPage" element={<RegisterSPage/>} />
+                <Route path="/projetpage/add" element={<AddProjectPage />} />
 
             </Routes>
         </Router>
