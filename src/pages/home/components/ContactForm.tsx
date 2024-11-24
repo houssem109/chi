@@ -26,7 +26,7 @@ export default function ContactForm() {
 
     // Set the message in Firebase Realtime Database
     try {
-      await set(ref(database, "UserData/" + messageId), {
+      await set(ref(database, "Questions/" + messageId), {
         email,
         subject,
         content,
